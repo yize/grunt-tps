@@ -16,6 +16,7 @@ module.exports = function (grunt) {
         // Configuration to be run (and then tested).
         tps: {
             options: {
+                pythonPath:"python",
                 tpsmatePath: "~/github/tpsmate/src/cli.py",
                 argv: "--inplace"
             },

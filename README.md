@@ -1,6 +1,6 @@
 # grunt-tps
 
-> taobao pictures system grunt plugin
+> Taobao Pictures System grunt plugin
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -42,6 +42,12 @@ tpsmate logout
 
 ### Options
 
+#### options.pythonPath
+Type: `String`
+Default value: `python`
+
+python的路径
+
 #### options.tpsmatePath
 Type: `String`
 Default value: `~/github/tpsmate/src/cli.py`
@@ -67,11 +73,12 @@ tpsmate的参数
 grunt.initConfig({
   tps: {
     options: {
+        pythonPath:"python",
         tpsmatePath:"~/github/tpsmate/src/cli.py",
-        argv: "--inplace",
-    },
+        argv: "--inplace"
+    }
     all: ['test.css', 'lib/**/*.css', 'test/**/*.scss','index.htm']
-  },
+  }
 })
 ```
 
@@ -79,6 +86,9 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+
+
+2013-05-28   v0.1.2   Add Options.pythonPath
 
 2013-05-28   v0.1.1   First official release
 

@@ -20,9 +20,13 @@ module.exports = function (grunt) {
         var host = this;
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
+            pythonPath:"python",
             tpsmatePath: "~/github/tpsmate/src/cli.py",
             argv: "--inplace"
         });
+
+        var pythonPath = options.pythonPath;
+        delete options.pythonPath;
 
         var tpsmatePath = options.tpsmatePath;
         delete options.tpsmatePath;
@@ -49,7 +53,7 @@ module.exports = function (grunt) {
                 }).join(' ');
 
 
-            var cmd = "python " + tpsmatePath + " upload " + fp + ' ' + argv;
+            var cmd = pythonPath + " " + tpsmatePath + " upload " + fp + ' ' + argv;
 
             console.log(cmd);
 
