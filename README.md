@@ -19,71 +19,41 @@ grunt.loadNpmTasks('grunt-tps');
 
 ## The "tps" task
 
-### Overview
-In your project's Gruntfile, add a section named `tps` to the data object passed into `grunt.initConfig()`.
-
-```js
-grunt.initConfig({
-  tps: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-})
-```
-
 ### Options
 
-#### options.separator
+#### options.tpsmatePath
 Type: `String`
-Default value: `',  '`
+Default value: `~/github/tpsmate/src/cli.py`
 
-A string value that is used to do something with whatever.
+your tpsmate `cli.py` path.
 
-#### options.punctuation
+#### options.argv
 Type: `String`
-Default value: `'.'`
+Default value: `--inplace`
 
-A string value that is used to do something else with whatever else.
+
+the options which allows you to set the arguments to the cli.py
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  tps: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+### normal
 
 ```js
 grunt.initConfig({
   tps: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+        tpsmatePath:"~/github/tpsmate/src/cli.py",
+        argv: "--inplace",
     },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    all: ['test.css', 'lib/**/*.css', 'test/**/*.scss','index.htm']
   },
 })
 ```
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+2013-05-28   v0.1.1   First official release
+2013-05-02   v0.1.0   Work in progress, not yet officially released.
