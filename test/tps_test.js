@@ -22,7 +22,7 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
-exports.tpsmate = {
+exports.tps = {
   setUp: function(done) {
     // setup here if necessary
     done();
@@ -44,5 +44,5 @@ exports.tpsmate = {
     test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
 
     test.done();
-  },
+  }
 };

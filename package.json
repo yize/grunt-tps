@@ -1,23 +1,23 @@
 {
-  "name": "grunt-tpsmate",
+  "name": "grunt-tps",
   "description": "taobao pictures system grunt plugin",
   "version": "0.1.0",
-  "homepage": "https://github.com/yize/grunt-tpsmate",
+  "homepage": "https://github.com/yize/grunt-tps",
   "author": {
     "name": "yize",
     "email": "yize.shc@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/yize/grunt-tpsmate.git"
+    "url": "git://github.com/yize/grunt-tps.git"
   },
   "bugs": {
-    "url": "https://github.com/yize/grunt-tpsmate/issues"
+    "url": "https://github.com/yize/grunt-tps/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/yize/grunt-tpsmate/blob/master/LICENSE-MIT"
+      "url": "https://github.com/yize/grunt-tps/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
