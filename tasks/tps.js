@@ -12,8 +12,8 @@ module.exports = function (grunt) {
     var path = require('path');
 
     var exec = require('child_process').exec;
-    var pythonPath = path.resolve('./tasks/lib/python/bin/python');
-    var tpsmatePath = path.resolve("./tasks/lib/tpsmate/src/cli.py");
+    var pythonPath = path.resolve("./node_modules/grunt-tps/tasks/lib/python/bin/python");
+    var tpsmatePath = path.resolve("./node_modules/grunt-tps/tasks/lib/tpsmate/src/cli.py");
 
 
     // Please see the Grunt documentation for more information regarding task
