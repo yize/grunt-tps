@@ -23,36 +23,9 @@ grunt.loadNpmTasks('grunt-tps');
 
 本插件基于[tpsmate](https://github.com/sodabiscuit/tpsmate)
 
-使用之前请仔细阅读[tpsmate文档](http://me.tardoc.com/tpsmate/)
-
-#### tpsmate配置
-
-```shell
-tpsmate config --username "username"
-tpsmate config --password "password"
-tpsmate config --encoding "utf-8,gbk,big5"
-tpsmate config --logdir "/path/to/save/csv/log/"
-tpsmate login --username "username" --password "password"
-tpsmate logout
-```
-
-这里的`tpsmate`指向的就是你本机的`xx/tpsmate/src/cli.py`文件
-
-第一次使用tpsmate，需要登录下，之后tpsmate就会记住你的登录信息，一般不需要再次登录
+只配置一次即可
 
 ### Options
-
-#### options.pythonPath
-Type: `String`
-Default value: `python`
-
-python的路径
-
-#### options.tpsmatePath
-Type: `String`
-Default value: `~/github/tpsmate/src/cli.py`
-
-tpsmate的运行脚本绝对地址。
 
 #### options.argv
 Type: `String`
@@ -73,8 +46,6 @@ tpsmate的参数
 grunt.initConfig({
   tps: {
     options: {
-        pythonPath:"python",
-        tpsmatePath:"~/github/tpsmate/src/cli.py",
         argv: "--inplace"
     }
     all: ['test.css', 'lib/**/*.css', 'test/**/*.scss','index.htm']
@@ -87,6 +58,9 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+2013-05-29   v0.2.0   Remove Options.pythonPath
+
+2013-05-28   v0.1.3   Remove Options.tpsmatePath
 
 2013-05-28   v0.1.2   Add Options.pythonPath
 

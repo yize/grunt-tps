@@ -9,8 +9,11 @@
 'use strict';
 
 module.exports = function (grunt) {
+    var path = require('path');
 
     var exec = require('child_process').exec;
+    var pythonPath = path.resolve('./tasks/lib/python/bin/python');
+    var tpsmatePath = path.resolve("./tasks/lib/tpsmate/src/cli.py");
 
 
     // Please see the Grunt documentation for more information regarding task
@@ -21,15 +24,15 @@ module.exports = function (grunt) {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
             pythonPath:"python",
-            tpsmatePath: "~/github/tpsmate/src/cli.py",
+            // tpsmatePath: "~/github/tpsmate/src/cli.py",
             argv: "--inplace"
         });
 
-        var pythonPath = options.pythonPath;
-        delete options.pythonPath;
+        // var pythonPath = options.pythonPath;
+        // delete options.pythonPath;
 
-        var tpsmatePath = options.tpsmatePath;
-        delete options.tpsmatePath;
+        // var tpsmatePath = options.tpsmatePath;
+        // delete options.tpsmatePath;
 
         var argv = options.argv;
         delete options.argv;
