@@ -23,8 +23,6 @@ grunt.loadNpmTasks('grunt-tps');
 
 本插件基于[tpsmate](https://github.com/sodabiscuit/tpsmate)
 
-只配置一次即可
-
 ### Options
 
 #### options.argv
