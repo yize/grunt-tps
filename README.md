@@ -23,7 +23,9 @@ grunt.loadNpmTasks('grunt-tps');
 
 本插件基于[tpsmate](https://github.com/sodabiscuit/tpsmate)
 
-使用之前请仔细阅读[tpsmate文档](http://me.tardoc.com/tpsmate/)
+需要先安装tpsmate，安装请参考[tpsmate官方文档](http://me.tardoc.com/tpsmate/)
+
+使用之前请保证本机有tpsmate。
 
 #### tpsmate配置
 
